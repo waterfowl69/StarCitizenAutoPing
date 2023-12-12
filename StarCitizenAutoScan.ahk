@@ -4,7 +4,7 @@
 ; you press control + tab again, you start pinging at another set speed
 ; you press control + tab again, you stop pinging
 ; you press y (to leave your seat) at any time, you stop pinging
-; press F12 to terminate the script (in case it starts going haywire, who knows)
+; press F9 to terminate the script (in case it starts going haywire, who knows)
 ; please don't use against players
 
 ; variables you can edit to fine tune
@@ -17,7 +17,7 @@ global holdingTab := false
 global pingHighSpeed := false
 
 ; Control + Tab
-^Tab:: 
+~^Tab:: 
 {
 	global
 	if(holdingTab && pingHighSpeed == true) ; if we're on the high speed pinging stage
