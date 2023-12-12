@@ -1,5 +1,5 @@
 # StarCitizenOldStyleScanButton.ahk
-Does what it says on the box, a single press scan button that functions like it used to. Once the script is running, toggle on/off with Control + Tab. Tab to scan. F9 will terminate the script.
+Does what it says on the box, a single press scan button that functions like it used to. Once the script is running, toggle on/off with Control + Tab. Tab to scan. F9 will terminate the script. Alternatively, close it in the system tray.
 
 # StarCitizenAutoScan.ahk
 An Autohotkey script that automatically pings so your finger doesn't fall off. 
@@ -19,12 +19,12 @@ Default use:
 
 - Press Control + Tab again to stop pinging.
 
-- Press Y (seat leave button) at any time to stop pinging.
+- Press Y (seat leave button) at any time to stop pinging. This means when you leave your seat you'll automatically stop pressing Tab.
 
 - Press F9 (you can change this) at any time to terminate the script. Alternatively, close it in the system tray.
 
-Feel free to edit the timing variables in the script, they're in milliseconds.
+Feel free to edit the timing variables in the script (just use notepad), they're in milliseconds. Both scripts play unobtrusive lore friendly beeps for feedback. Alternatively, there's a silent version.
 
 Autohotkey is a macro program for making life easier. Automation of key presses is generally not considered cheating unless it gives an unfair advantage, or enables you to do things that shouldn't be possible. According to developers from Epic Games, EAC does not care about AHK, and isn't any different than using a fancy keyboard. Still, use at your own risk.
 
-Requires AutoHotKey V2. Download from here: https://www.autohotkey.com/download/
+Requires AutoHotKey V2. Download from here: https://www.autohotkey.com/download/ or here: https://github.com/AutoHotkey/AutoHotkey/releases

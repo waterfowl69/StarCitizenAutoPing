@@ -8,10 +8,12 @@ global tabHoldTime := 300 ; how long tab is held for pings
 global scriptEnabled := true
 
 ; Control + Tab to toggle script
+; Alternatives: ~+Tab (shift tab), ~F5 (F5), etc
 ~^Tab:: 
 {
 	global
-	scriptEnabled := !scriptEnabled
+    try SoundPlay "Button_2.wav"
+	scriptEnabled := !scriptEnabled 
 }
 
 ~Tab:: ; Plain old Tab to scan
@@ -36,5 +38,6 @@ HoldAndReleaseTab()
 ; Emergency Exit, terminates the script
 ~F9::
 {
+    SoundPlay "*-1"
 	ExitApp
 }
