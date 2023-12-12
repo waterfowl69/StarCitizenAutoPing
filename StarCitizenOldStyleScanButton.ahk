@@ -4,7 +4,6 @@
 ; when enabled, tab will hold for 300ms then release, creating an easy to use scan button
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 
-; variables you can edit to fine tune
 global tabHoldTime := 300 ; how long tab is held for pings
 global scriptEnabled := true
 
@@ -20,12 +19,12 @@ global scriptEnabled := true
     global
     if(scriptEnabled)
     {
-        ReleaseTab
+        HoldAndReleaseTab
     }
 }
 
 ; Tab timer function
-ReleaseTab()
+HoldAndReleaseTab()
 {
 	global
 	rand := Random(0, 30)

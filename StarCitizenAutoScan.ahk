@@ -25,18 +25,18 @@ global pingHighSpeed := false
 		; end our pinging, reset all bools
 		holdingTab := false
 		pingHighSpeed := false
-		SetTimer ReleaseTab, 0
+		SetTimer HoldAndReleaseTab, 0
 	}
 	else if(holdingTab == false) ; if we're not pinging
 	{
 		holdingTab := true
-		ReleaseTab() ; initial ping
-		SetTimer ReleaseTab, pingInterval
+		HoldAndReleaseTab() ; initial ping
+		SetTimer HoldAndReleaseTab, pingInterval
 	}
 	else ; if we're on the slow speed ping stage
 	{
 		pingHighSpeed := true
-		SetTimer ReleaseTab, pingHighSpeedInterval
+		SetTimer HoldAndReleaseTab, pingHighSpeedInterval
 	}
 }	
 
@@ -46,11 +46,11 @@ global pingHighSpeed := false
 	global
 	holdingTab := false
 	pingHighSpeed := false
-	SetTimer ReleaseTab, 0
+	SetTimer HoldAndReleaseTab, 0
 }
 
 ; Tab timer function
-ReleaseTab()
+HoldAndReleaseTab()
 {
 	global
 	rand := Random(0, 30)
