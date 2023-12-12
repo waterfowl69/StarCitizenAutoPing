@@ -1,5 +1,5 @@
 # Star Citizen Auto Ping
-An Autohotkey script that automatically pings so your finger doesn't fall off. Autohotkey is a macro program for making life easier. Automation of key presses is generally not considered cheating unless it gives an unfair or advantage. According to developers from Epic Games, EAC does not care about AHK, and isn't any different than using a fancy keyboard. Still, use at your own risk.
+An Autohotkey script that automatically pings so your finger doesn't fall off. Autohotkey is a macro program for making life easier. Automation of key presses is generally not considered cheating unless it gives an unfair advantage, or enables you to do things that shouldn't be possible. According to developers from Epic Games, EAC does not care about AHK, and isn't any different than using a fancy keyboard. Still, use at your own risk.
 
 Requires AutoHotKey V2. Download from here: https://www.autohotkey.com/download/
 
