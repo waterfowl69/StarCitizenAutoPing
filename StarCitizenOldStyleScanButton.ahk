@@ -12,7 +12,7 @@ global scriptEnabled := true
 ~^Tab:: 
 {
 	global
-    try SoundPlay "Button_2.wav"
+    try SoundPlay "Sounds/Button_2.wav"
 	scriptEnabled := !scriptEnabled 
 }
 

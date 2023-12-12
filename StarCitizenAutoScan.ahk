@@ -23,20 +23,19 @@ global pingHighSpeed := false
 	global
 	if(currentlyPinging == false) ; if we're not pinging
 	{
-		try SoundPlay "Button_1.wav"
+		try SoundPlay "Sounds/Button_1.wav"
 		currentlyPinging := true
-		HoldAndReleaseTab() ; initial ping so there isn't a pause
-		SetTimer HoldAndReleaseTab, pingInterval
+		SetTimer HoldAndReleaseTab, 1
 	}
 	else if(currentlyPinging && pingHighSpeed == false) ; if we're on the slow speed ping stage
 	{
-		try SoundPlay "Button_2.wav"
+		try SoundPlay "Sounds/Button_2.wav"
 		pingHighSpeed := true
-		SetTimer HoldAndReleaseTab, pingHighSpeedInterval
+		SetTimer HoldAndReleaseTab, 1
 	}
 	else ; if we're on the high speed ping stage, shut it down
 	{
-		try SoundPlay "Button_3.wav"
+		try SoundPlay "Sounds/Button_3.wav"
 		EndPinging()
 	}
 }	
@@ -44,10 +43,12 @@ global pingHighSpeed := false
 ; Plain old Y
 ~Y::
 {
-	EndPinging()
+	if(currentlyPinging) 
+		EndPinging()
 }
 
 ; Tab timer function
+; We start the timer on 1ms and update the interval inside the function so we get an initial ping
 HoldAndReleaseTab()
 {
 	global
@@ -55,12 +56,17 @@ HoldAndReleaseTab()
 	Send "{Tab Down}"
 	Sleep tabHoldTime + rand
 	Send "{Tab Up}"
+	if(pingHighSpeed)
+		SetTimer , pingHighSpeedInterval 
+	else 
+		SetTimer , pingInterval 
 }
 
 ; resets all bools, stops timer
 EndPinging()
 {
 	global
+	try SoundPlay "Sounds/Button_3.wav"
 	currentlyPinging := false
 	pingHighSpeed := false
 	SetTimer HoldAndReleaseTab, 0
