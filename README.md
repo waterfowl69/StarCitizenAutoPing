@@ -20,6 +20,6 @@ Default use:
 
 - Press Y (seat leave button) at any time to stop pinging.
 
-- Press F12 at any time to terminate the script. Alternatively, close it in the system tray.
+- Press F9 (you can change this) at any time to terminate the script. Alternatively, close it in the system tray.
 
 Feel free to edit the timing variables in the script, they're in milliseconds.

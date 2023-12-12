@@ -30,6 +30,7 @@ global pingHighSpeed := false
 	else if(holdingTab == false) ; if we're not pinging
 	{
 		holdingTab := true
+		ReleaseTab() ; initial ping
 		SetTimer ReleaseTab, pingInterval
 	}
 	else ; if we're on the slow speed ping stage
@@ -59,7 +60,7 @@ ReleaseTab()
 }
 
 ; Emergency Exit, terminates the script
-~F12::
+~F9::
 {
 	ExitApp
 }
