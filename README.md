@@ -1,7 +1,7 @@
 Requires AutoHotKey V2. Download from here: https://www.autohotkey.com/download/ or here: https://github.com/AutoHotkey/AutoHotkey/releases
 
 # Instructions
-Install AutoHotKey V2, download the scripts from here, then run the one you prefer by double clicking it. If your scan binding is not tab, then you can edit the script with a text editor, just replace occurances of "Tab" with whatever key you use. Please read about the scripts below. 
+Install AutoHotKey V2, download the scripts from here, then run the one you prefer by double clicking it. If your scan binding is not tab, then you can edit the script with a text editor, just replace occurances of "Tab" with whatever key you use. If you don't want the sounds, just delete the sounds folder, it shouldn't affect anything. Please read about the scripts below. 
 
 # StarCitizenOldStyleScanButton.ahk
 Does what it says on the box, a single press scan button that functions like it used to. Once the script is running, toggle on/off with Shift + Tab. Tab to scan. F9 will terminate the script. Alternatively, close it in the system tray.
