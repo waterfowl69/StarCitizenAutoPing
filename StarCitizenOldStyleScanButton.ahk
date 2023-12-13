@@ -4,7 +4,6 @@
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 
 global tabHoldTime := 300 ; how long tab is held for pings
-global scriptEnabled := true
 
 CapsLock:: ; Plain old Tab to scan
 {
