@@ -7,18 +7,19 @@
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 ; please don't use against players
 
-; variables you can edit to fine tune
+; FINE TUNE HERE - edit these variables
 global pingInterval := 4000 ; time between pings on the first stage
 global pingHighSpeedInterval := 2000  ; time between pings on the second stage
-global tabHoldTime := 300 ; how long tab is held for pings
+global tabHoldTime := 300 ; how long tab is held for pings (not really worth going below 300, but lag or something might necessitate a change)
 
 ; variables you shouldn't touch unless you're editing the script
 global currentlyPinging := false
 global pingHighSpeed := false
 
 ; Control + Tab
+; Toggles the ping mode
 ; Alternatives: ~+Tab:: (shift tab), ~F5:: (F5), etc
-~^Tab:: 
+~+Tab:: 
 {
 	global
 	if(currentlyPinging == false) ; if we're not pinging
@@ -31,7 +32,6 @@ global pingHighSpeed := false
 	{
 		try SoundPlay "Sounds/Button_2.wav"
 		pingHighSpeed := true
-		SetTimer HoldAndReleaseTab, 1
 	}
 	else ; if we're on the high speed ping stage, shut it down
 	{
@@ -48,14 +48,14 @@ global pingHighSpeed := false
 }
 
 ; Tab timer function
-; We start the timer on 1ms and update the interval inside the function so we get an initial ping
+; We start the timer on 1ms and update the interval inside the timer so we get an initial ping
 HoldAndReleaseTab()
 {
 	global
 	rand := Random(0, 30)
-	Send "{Tab Down}"
+	Send "{Tab Down}" ; Change 'Tab' if your scan binding is not 'Tab'
 	Sleep tabHoldTime + rand
-	Send "{Tab Up}"
+	Send "{Tab Up}" ; Change 'Tab' if your scan binding is not 'Tab'
 	if(pingHighSpeed)
 		SetTimer , pingHighSpeedInterval 
 	else 
