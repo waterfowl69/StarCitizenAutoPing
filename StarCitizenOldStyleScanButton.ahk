@@ -15,9 +15,9 @@ HoldAndReleaseTab()
 {
 	global
 	rand := Random(0, 30)
-	Send "{Tab Down}"
+	Send "{Tab Down}" ; Change 'Tab' if your scan binding is not 'Tab'
 	Sleep tabHoldTime + rand
-	Send "{Tab Up}"
+	Send "{Tab Up}" ; Change 'Tab' if your scan binding is not 'Tab'
 }
 
 ; Emergency Exit, terminates the script
