@@ -1,8 +1,8 @@
 ﻿#Requires AutoHotkey v2.0
 ; this script works in the following fashion
-; you press shift + tab, you start auto pinging (holding tab down and releasing) every so many ms
-; you press shift + tab again, you start pinging at another set speed
-; you press shift + tab again, you stop pinging
+; you press capslock, you start auto pinging (holding tab down and releasing) every so many ms
+; you press capslock again, you start pinging at another set speed
+; you press capslock again, you stop pinging
 ; you press y (to leave your seat) at any time, you stop pinging
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 ; please don't use against players
@@ -18,8 +18,9 @@ global pingHighSpeed := false
 
 ; Shift + Tab
 ; Toggles the ping mode
-; Alternatives: ~^Tab:: (control tab), ~F10:: (F10), etc
-~+Tab:: 
+; Alternatives: ~^Tab:: (control tab), ~F10:: (F10), ~+Tab:: (shift tab), etc
+; if caps lock isn't working and you want to use it, try adding a ~ before it. If SC is using the bind, it can cause issues
+CapsLock:: 
 {
 	global
 	if(currentlyPinging == false) ; if we're not pinging
@@ -32,6 +33,7 @@ global pingHighSpeed := false
 	{
 		try SoundPlay "Sounds/Button_2.wav"
 		pingHighSpeed := true
+		SetTimer HoldAndReleaseTab, 1
 	}
 	else ; if we're on the high speed ping stage, shut it down
 	{

@@ -1,28 +1,14 @@
 ﻿#Requires AutoHotkey v2.0
 ; this script works in the following fashion
-; shift + tab toggles functionality
-; when enabled, tab will hold for 300ms then release, creating an easy to use scan button
+; when running, pressing capslock will hold tab for 300ms then release, creating an easy to use scan button
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 
 global tabHoldTime := 300 ; how long tab is held for pings
 global scriptEnabled := true
 
-; Shift + Tab to toggle script
-; Alternatives: ~^Tab (shift tab), ~F10 (F10), etc
-~+Tab:: 
+CapsLock:: ; Plain old Tab to scan
 {
-	global
-    try SoundPlay "Sounds/Button_2.wav"
-	scriptEnabled := !scriptEnabled 
-}
-
-~Tab:: ; Plain old Tab to scan
-{
-    global
-    if(scriptEnabled)
-    {
-        HoldAndReleaseTab
-    }
+    HoldAndReleaseTab
 }
 
 ; Tab timer function
