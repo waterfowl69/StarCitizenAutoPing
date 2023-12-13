@@ -16,7 +16,7 @@ global tabHoldTime := 300 ; how long tab is held for pings (not really worth goi
 global currentlyPinging := false
 global pingHighSpeed := false
 
-; Shift + Tab
+; Capslock
 ; Toggles the ping mode
 ; Alternatives: ~^Tab:: (control tab), ~F10:: (F10), ~+Tab:: (shift tab), etc
 ; if caps lock isn't working and you want to use it, try adding a ~ before it. If SC is using the bind, it can cause issues
