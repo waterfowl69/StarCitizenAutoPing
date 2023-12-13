@@ -4,7 +4,7 @@ Requires AutoHotKey V2. Download from here: https://www.autohotkey.com/download/
 Install AutoHotKey V2, download the scripts from here, then run the one you prefer by double clicking it. If your scan binding is not tab, then you can edit the script with a text editor, just replace occurances of "Tab" with whatever key you use. Please read about the scripts below. 
 
 # StarCitizenOldStyleScanButton.ahk
-Does what it says on the box, a single press scan button that functions like it used to. Once the script is running, toggle on/off with Control + Tab. Tab to scan. F9 will terminate the script. Alternatively, close it in the system tray.
+Does what it says on the box, a single press scan button that functions like it used to. Once the script is running, toggle on/off with Shift + Tab. Tab to scan. F9 will terminate the script. Alternatively, close it in the system tray.
 
 # StarCitizenAutoScan.ahk
 An Autohotkey script that automatically repeatedly pings with your ship scanner. 
@@ -18,11 +18,11 @@ Please don't use it with the intention of scanning out players for pvp purposes,
 
 Default use:
 
-- Control + Tab to start pinging every 4 seconds.
+- Shift + Tab to start pinging every 4 seconds.
 
-- Press Control + Tab again to reduce ping time to 2 seconds.
+- Press Shift + Tab again to reduce ping time to 2 seconds.
 
-- Press Control + Tab again to stop pinging.
+- Press Shift + Tab again to stop pinging.
 
 - Press Y (seat leave button) at any time to stop pinging. This means when you leave your seat you'll automatically stop pressing Tab.
 

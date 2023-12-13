@@ -1,8 +1,8 @@
 ﻿#Requires AutoHotkey v2.0
 ; this script works in the following fashion
-; you press control + tab, you start auto pinging (holding tab down and releasing) every so many ms
-; you press control + tab again, you start pinging at another set speed
-; you press control + tab again, you stop pinging
+; you press shift + tab, you start auto pinging (holding tab down and releasing) every so many ms
+; you press shift + tab again, you start pinging at another set speed
+; you press shift + tab again, you stop pinging
 ; you press y (to leave your seat) at any time, you stop pinging
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 ; please don't use against players
@@ -16,9 +16,9 @@ global tabHoldTime := 300 ; how long tab is held for pings (not really worth goi
 global currentlyPinging := false
 global pingHighSpeed := false
 
-; Control + Tab
+; Shift + Tab
 ; Toggles the ping mode
-; Alternatives: ~+Tab:: (shift tab), ~F5:: (F5), etc
+; Alternatives: ~^Tab:: (control tab), ~F10:: (F10), etc
 ~+Tab:: 
 {
 	global
