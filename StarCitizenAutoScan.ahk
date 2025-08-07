@@ -8,7 +8,7 @@
 ; some people might consider this cheating if you're using it against players
 
 global StarCitizenScanBinding := "Tab" ;change this to your SC scan binding input key. 
-global activationKey := "Capslock" ;note: if an input isn't working, try addling a tilda ~ before it, to stop windows or other programs from seizing the event
+global activationKey := "Capslock" ;note: if an input isn't working, try adding a tilda ~ before it, to stop windows or other programs from seizing the event
 global leaveSeatKey := "~Y" ;should be the same key you use in SC to leave your seat
 global forceStopKey := "~F9"
 ;Alternative activation keys: copy and paste everything inside the quotations over what's in the original's quotations
@@ -17,6 +17,8 @@ global forceStopKey := "~F9"
 ;global activationKey := "~^Tab" ;(control tab)
 ;global activationKey := "~+Tab" ;(shift tab)
 ;global activationKey := "~F10" 
+;!!JOYSTICK SUPPORT!!: "Joy1", "Joy2", "Joy3", etc. You'll probably have to experiment a bit to find the right one, or check through windows
+;example: global activationKey := "Joy16"
 
 ; FINE TUNE HERE - edit these variables
 global pingInterval := 4000 ; time between pings on the first stage
