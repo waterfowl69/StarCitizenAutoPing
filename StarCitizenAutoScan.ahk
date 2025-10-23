@@ -84,7 +84,7 @@ EndPinging()
 HoldAndReleaseScanBinding()
 {
 	global
-	rand := Random(0, 15)
+	rand := Random(0, 15) ; we have a random time element to simulate a human keypress
 	Send("{" StarCitizenScanBinding " Down}")
 	Sleep tabHoldTime + rand
 	Send("{" StarCitizenScanBinding " Up}")
@@ -113,5 +113,5 @@ ForceStop()
 {
 	SoundPlay "*-1"
 	ExitApp
-
 }
+
