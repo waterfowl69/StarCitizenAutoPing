@@ -1,4 +1,5 @@
 ﻿#Requires AutoHotkey v2.0
+; ===== DESCRIPTION =====
 ; this script works in the following fashion
 ; you press the activation key, you start auto pinging (using StarCitizenScanBinding)
 ; you press activation again, you start pinging at another set speed
@@ -7,10 +8,13 @@
 ; press F9 to terminate the script (in case it starts going haywire, who knows)
 ; some people might consider this cheating if you're using it against players
 
+; ===== EDIT THESE TO CUSTOMIZE HOTKEYS =====
 global StarCitizenScanBinding := "Tab" ;change this to your SC scan binding input key. 
 global activationKey := "Capslock" ;note: if an input isn't working, try adding a tilda ~ before it, to stop windows or other programs from seizing the event
 global leaveSeatKey := "~Y" ;should be the same key you use in SC to leave your seat
 global forceStopKey := "~F9"
+
+; ===== alternate hotkey examples =====
 ;Alternative activation keys: copy and paste everything inside the quotations over what's in the original's quotations
 ;global activationKey := "~^Capslock" ;(control capslock)
 ;global activationKey := "~+Capslock" ;(shift capslock)
@@ -20,7 +24,7 @@ global forceStopKey := "~F9"
 ;!!JOYSTICK SUPPORT!!: "Joy1", "Joy2", "Joy3", etc. You'll probably have to experiment a bit to find the right one, or check through windows
 ;example: global activationKey := "Joy16"
 
-; FINE TUNE HERE - edit these variables
+; ===== FINE TUNE HERE ===== -edit these variables to change timing
 global pingInterval := 4000 ; time between pings on the first stage
 global pingHighSpeedInterval := 2000  ; time between pings on the second stage
 global tabHoldTime := 25 ; simulate human keypress. If the script doesn't work, tweaking this might help
@@ -109,4 +113,5 @@ ForceStop()
 {
 	SoundPlay "*-1"
 	ExitApp
+
 }
