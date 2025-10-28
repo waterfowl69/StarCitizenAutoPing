@@ -40,6 +40,9 @@ Hotkey(activationKey, (*) => AutopingToggle())
 Hotkey(leaveSeatKey, (*) => LeaveSeatOverride())
 Hotkey(forceStopKey, (*) => ForceStop())
 
+; launch feedback
+try SoundPlay "Sounds/Button_1.wav" ; we play a sound on script launch so the user knows it's working
+
 AutopingToggle()
 {
 	global
